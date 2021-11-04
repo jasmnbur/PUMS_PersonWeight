@@ -1,50 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import pandas as pd
 
+# downloaded 2019 1-year person (p) variables for NY state (code 36) from Census ACS FTP site
+df = pd.read_csv(r'/Users/jburesch/Desktop/psam_p36.csv')
 
-# In[22]:
+# taking a glimpse at the person weights
+df['POWPUMA'].head()
 
-
-df = pd.read_csv(r'/Users/jburesch/Desktop/psam_p36.csv', nrows = 50)
-
-
-# In[23]:
-
-
-df
-
-
-# In[24]:
-
-
-df['POWPUMA']
-
-
-# In[25]:
-
-
+# new data frame
 df[df['POWPUMA'].notnull()]
 
-
-# In[27]:
-
-
+# defining person weight sum
 column_sum = df['PWGTP'].sum()
 
-
-# In[29]:
-
-
+# outputs 19453561 (NY state has a population of 19,453,561
 print(column_sum)
-
-
-# In[ ]:
-
-
-
-

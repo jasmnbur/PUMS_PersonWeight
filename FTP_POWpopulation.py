@@ -12,5 +12,5 @@ df[df['POWPUMA'].notnull()]
 # defining person weight sum
 column_sum = df['PWGTP'].sum()
 
-# outputs 19453561 (NY state has a population of 19,453,561
+# outputs 19453561 (NY state has a population of 19,453,561)
 print(column_sum)
